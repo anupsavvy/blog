@@ -8,4 +8,4 @@ research based web applications. This site is to document my learnings in the fi
 
 Feel free to contact me at anupsatishsawant@gmail.com
 
-- Anup.
+Anup.
