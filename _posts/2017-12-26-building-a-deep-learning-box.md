@@ -20,7 +20,7 @@ With the above things in mind, I went for a compact box that supports mini-itx m
   </thead>
   <tfoot>
     <tr>
-      <td>[32 GB RAM](https://www.amazon.com/gp/product/B0123ZBPDA/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1)</td>
+      <td><a href="https://www.amazon.com/gp/product/B0123ZBPDA/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1">32 GB RAM</a></td>
       <td>150</td>
     </tr>
   </tfoot>
@@ -66,7 +66,7 @@ With the above things in mind, I went for a compact box that supports mini-itx m
 
 * [Build a super fast deep learning machine for under $1,000](https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000)
 * [Building your own deep learning box](https://towardsdatascience.com/building-your-own-deep-learning-box-47b918aea1eb)
-* Setting up a Deep learning machine in a lazy yet quick way
+* [Setting up a Deep learning machine in a lazy yet quick way]
 (https://medium.com/impactai/setting-up-a-deep-learning-machine-in-a-lazy-yet-quick-way-be2642318850)
 
 All of the above blogs give an in-depth description on how to setup a box. I must mention that the last two blogs are of [fastai](http://www.fast.ai/) students. I took the first version of fastai course this fall. I will discuss more on it in my subsequent blogs.
