@@ -26,31 +26,31 @@ With the above things in mind, I went for a compact box that supports mini-itx m
   </tfoot>
   <tbody>
     <tr>
-      <td>[MSI mini-itx motherboard](https://www.amazon.com/gp/product/B01N4LCWJE/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)</td>
+      <td><a href="https://www.amazon.com/gp/product/B01N4LCWJE/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1">MSI mini-itx motherboard</a></td>
       <td>65</td>
     </tr>
     <tr>
-      <td>[Low-Profile CPU cooler](https://www.amazon.com/gp/product/B009VCAJ7W/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1)</td>
+      <td><a href="https://www.amazon.com/gp/product/B009VCAJ7W/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1">Low-Profile CPU cooler</a></td>
       <td>39</td>
     </tr>
     <tr>
-      <td>[Chassis](https://www.amazon.com/gp/product/B015UDUAKG/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)</td>
+      <td><a href="https://www.amazon.com/gp/product/B015UDUAKG/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1">Chassis</a></td>
       <td>50</td>
     </tr>
     <tr>
-    <td>[Core i5](https://www.amazon.com/Intel-I5-6400-FC-LGA14C-Processor-BX80662I56400/dp/B010T6CG7E/ref=sr_1_9?s=electronics&ie=UTF8&qid=1514360851&sr=1-9&keywords=intel+core+i5)</td>
+    <td><a href="https://www.amazon.com/Intel-I5-6400-FC-LGA14C-Processor-BX80662I56400/dp/B010T6CG7E/ref=sr_1_9?s=electronics&ie=UTF8&qid=1514360851&sr=1-9&keywords=intel+core+i5">Core i5</a></td>
     <td>119</td>
     </tr>
     <tr>
-    <td>[GTX 1070 8GB](https://www.amazon.com/gp/product/B01KVZBNY0/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)</td>
+    <td><a href="https://www.amazon.com/gp/product/B01KVZBNY0/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1">GTX 1070 8GB</a></td>
     <td>429</td>
     </tr>
     <tr>
-    <td>[450W Power Supply](https://www.amazon.com/gp/product/B01F5LX55K/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)</td>
+    <td><a href="https://www.amazon.com/gp/product/B01F5LX55K/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1">450W Power Supply</a></td>
     <td>40</td>
     </tr>
     <tr>
-    <td>[1TB HDD](https://www.amazon.com/gp/product/B0088PUEPK/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)</td>
+    <td><a href="https://www.amazon.com/gp/product/B0088PUEPK/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1">1TB HDD</a></td>
     <td>50</td>
     </tr>
     <tr>
@@ -66,7 +66,6 @@ With the above things in mind, I went for a compact box that supports mini-itx m
 
 * [Build a super fast deep learning machine for under $1,000](https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000)
 * [Building your own deep learning box](https://towardsdatascience.com/building-your-own-deep-learning-box-47b918aea1eb)
-* [Setting up a Deep learning machine in a lazy yet quick way]
-(https://medium.com/impactai/setting-up-a-deep-learning-machine-in-a-lazy-yet-quick-way-be2642318850)
+* [Setting up a Deep learning machine in a lazy yet quick way](https://medium.com/impactai/setting-up-a-deep-learning-machine-in-a-lazy-yet-quick-way-be2642318850)
 
 All of the above blogs give an in-depth description on how to setup a box. I must mention that the last two blogs are of [fastai](http://www.fast.ai/) students. I took the first version of fastai course this fall. I will discuss more on it in my subsequent blogs.
