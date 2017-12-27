@@ -7,7 +7,7 @@ permalink:           pretty
 title:               Anup Sawant
 tagline:             'Learning Deep Networks'
 description:         'This site documents my journey towards getting better at Deep Learning and related topics.'
-url:                 https://anupsavvy.github.io/blog/
+url:                 https://anupsavvy.github.io/lanyon/
 baseurl:             '/blog'
 paginate:            5
 
