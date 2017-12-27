@@ -19,12 +19,16 @@ With the above things in mind, I went for a compact box that supports mini-itx m
     </tr>
   </thead>
   <tfoot>
-    <tr>
-      <td><a href="https://www.amazon.com/gp/product/B0123ZBPDA/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1">32 GB RAM</a></td>
-      <td>150</td>
-    </tr>
+  <tr>
+  <td><strong>Total</strong></td>
+  <td>944</td>
+  </tr>
   </tfoot>
   <tbody>
+  <tr>
+    <td><a href="https://www.amazon.com/gp/product/B0123ZBPDA/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1">32 GB RAM</a></td>
+    <td>150</td>
+  </tr>
     <tr>
       <td><a href="https://www.amazon.com/gp/product/B01N4LCWJE/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1">MSI mini-itx motherboard</a></td>
       <td>65</td>
@@ -52,10 +56,6 @@ With the above things in mind, I went for a compact box that supports mini-itx m
     <tr>
     <td><a href="https://www.amazon.com/gp/product/B0088PUEPK/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1">1TB HDD</a></td>
     <td>50</td>
-    </tr>
-    <tr>
-    <td><strong>Total</strong></td>
-    <td>944</td>
     </tr>
   </tbody>
 </table>
