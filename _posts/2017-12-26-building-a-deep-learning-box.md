@@ -3,36 +3,70 @@ layout: post
 title: Building a Deep Learning Box
 ---
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+While there are many useful and well-written blogs out there, I quickly wanted to document my own setup and some reasons that led to it.
 
-### Built on Poole
+Most people usually prefer to go with high specs that allow them to add more hardware in the future. And probably when it comes to Deep Learning, the more the better. I, however, set myself moderate expectations, both, on cost and performance front. I was looking to build a box for somewhere around 900 dollars that would allow me to gain good amount of expertise on Deep Learning topics. Computation time is currently not an issue for me. Probably, when I get to a stage where I am good at Deep Learning, I am hoping to work at a place where I get to utilize my skills and not aim at expanding study projects beyond my own box.
 
-Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Lanyon here) includes the following:
+With the above things in mind, I went for a compact box that supports mini-itx motherboard. I really love how it looks and performs for its size !!!
 
-* Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
-* Mobile friendly design and development
-* Easily scalable text and component sizing with `rem` units in the CSS
-* Support for a wide gamut of HTML elements
-* Related posts (time-based, because Jekyll) below each post
-* Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)
+#### Below is my list of parts with pricing.
 
-### Lanyon features
+<table>
+  <thead>
+    <tr>
+      <th>Parts</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>[32 GB RAM](https://www.amazon.com/gp/product/B0123ZBPDA/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1)</td>
+      <td>150</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>[MSI mini-itx motherboard](https://www.amazon.com/gp/product/B01N4LCWJE/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>[Low-Profile CPU cooler](https://www.amazon.com/gp/product/B009VCAJ7W/ref=oh_aui_detailpage_o08_s00?ie=UTF8&psc=1)</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td>[Chassis](https://www.amazon.com/gp/product/B015UDUAKG/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)</td>
+      <td>50</td>
+    </tr>
+    <tr>
+    <td>[Core i5](https://www.amazon.com/Intel-I5-6400-FC-LGA14C-Processor-BX80662I56400/dp/B010T6CG7E/ref=sr_1_9?s=electronics&ie=UTF8&qid=1514360851&sr=1-9&keywords=intel+core+i5)</td>
+    <td>119</td>
+    </tr>
+    <tr>
+    <td>[GTX 1070 8GB](https://www.amazon.com/gp/product/B01KVZBNY0/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)</td>
+    <td>429</td>
+    </tr>
+    <tr>
+    <td>[450W Power Supply](https://www.amazon.com/gp/product/B01F5LX55K/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)</td>
+    <td>40</td>
+    </tr>
+    <tr>
+    <td>[1TB HDD](https://www.amazon.com/gp/product/B0088PUEPK/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)</td>
+    <td>50</td>
+    </tr>
+    <tr>
+    <td><strong>Total</strong></td>
+    <td>944</td>
+    </tr>
+  </tbody>
+</table>
 
-In addition to the features of Poole, Lanyon adds the following:
+<strong>I bought all of the above parts during Thanksgiving. This saved me around 250 bucks.</strong>
 
-* Toggleable sliding sidebar (built with only CSS) via **☰** link in top corner
-* Sidebar includes support for textual modules and a dynamically generated navigation with active link support
-* Two orientations for content and sidebar, default (left sidebar) and [reverse](https://github.com/poole/lanyon#reverse-layout) (right sidebar), available via `<body>` classes
-* [Eight optional color schemes](https://github.com/poole/lanyon#themes), available via `<body>` classes
+#### Following are some resources that helped me put together my box.
 
-[Head to the readme](https://github.com/poole/lanyon#readme) to learn more.
+* [Build a super fast deep learning machine for under $1,000](https://www.oreilly.com/learning/build-a-super-fast-deep-learning-machine-for-under-1000)
+* [Building your own deep learning box](https://towardsdatascience.com/building-your-own-deep-learning-box-47b918aea1eb)
+* Setting up a Deep learning machine in a lazy yet quick way
+(https://medium.com/impactai/setting-up-a-deep-learning-machine-in-a-lazy-yet-quick-way-be2642318850)
 
-### Browser support
-
-Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.
-
-### Download
-
-Lanyon is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/lanyon">GitHub repository</a> for downloads, bug reports, and features requests.
-
-Thanks!
+All of the above blogs give an in-depth description on how to setup a box. I must mention that the last two blogs are of [fastai](http://www.fast.ai/) students. I took the first version of fastai course this fall. I will discuss more on it in my subsequent blogs.
