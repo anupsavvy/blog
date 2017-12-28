@@ -73,12 +73,12 @@ All of the above blogs give an in-depth description on how to setup a box. I mus
 <table>
   <tbody>
     <tr>
-      <td><img src="{{ site.baseurl }}/public/img/bolt1.img"></td>
-      <td><img src="{{ site.baseurl }}/public/img/bolt2.img"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt1.jpg"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt2.jpg"></td>
     </tr>
     <tr>
-      <td><img src="{{ site.baseurl }}/public/img/bolt3.img"></td>
-      <td><img src="{{ site.baseurl }}/public/img/bolt4.img"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt3.jpg"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt4.jpg"></td>
     </tr>
   </tbody>
 </table>
