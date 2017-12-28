@@ -117,7 +117,7 @@ def linear_forward(X, parameters):
     return Z
 {% endhighlight %}
 
-As per Fig 1, we calculate activation based on the Sigmoid function $$1/(1 + e^(-Z))$$
+As per Fig 1, we calculate activation based on the Sigmoid function $$1/(1 + e^{-Z})$$
 
 {% highlight python %}
 # compute activation
