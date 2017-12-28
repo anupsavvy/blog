@@ -140,6 +140,8 @@ Based on the predicted values, we now calculate total loss over samples.
 
 $$J = (-1/m)\sum_{i=0}^m(Y\log(A) + (1-Y)\log(1-A))$$
 
+<i>Note: I have tried to add a bit of regularization in this as well</i>
+
 {% highlight python %}
 # compute cost
 def compute_cost(Y,A,lambd,W):
@@ -156,4 +158,119 @@ def compute_cost(Y,A,lambd,W):
     J = J + (lambd/(2*m))*np.sum(np.dot(W.reshape(W.shape[1],W.shape[0]),W))
 
     return J  
+{% endhighlight %}
+
+And now we start our journey backwards. Following function computes gradients of parameters.
+The note in the comments should be self-explanatory.
+
+{% highlight python %}
+# calculate gradients
+def compute_gradients(A,Y,X):
+    '''
+        parameters:
+            A: activation outputs for all samples
+            X: samples
+            Y: outputs
+
+        returns:
+            grads: dictionary of gradients with respect to total loss
+
+        Note: gradient of loss w.r.t activations is (-y/a) + (1-y)/(1-a)
+              gradient of activations w.r.t linear output is a(1-a)
+              Hence, gradient of loss w.r.t linear output is (a-y)
+    '''
+
+    dZ = A - Y ## gradient of loss w.r.t linear output
+    dW = np.dot(X,dZ.reshape(m,1))/m ## gradient of loss w.r.t. weights
+    db = np.sum(dZ)/m ## gradient of loss w.r.t bias
+
+    assert(dW.shape == (X.shape[0],1)),'check shape of dW'
+
+    return {'dW' : dW, 'db': db}  
+{% endhighlight %}
+
+{% highlight python %}
+## update parameters
+
+def update_parameters(parameters,grads,learning_rate,lambd):
+    '''
+        parameters:
+            W: weight matrix
+            b: bias
+            dW: weight gradient
+            db: bias gradient
+            learning_rate
+
+        returns:
+            W,b
+    '''
+    W = parameters['W']
+    b = parameters['b']
+
+    W = W - learning_rate*(grads['dW'] + (lambd/m)*W)
+    b = b - learning_rate*grads['db']
+
+    return {'W':W,'b':b}
+
+    ## make predictions
+
+def predict(X,Y,parameters):
+
+    '''
+        parameters:
+            X: samples
+            Y: output
+            parameters
+    '''
+    Y = Y < 0.5
+    Y_pred = linear_forward_with_activation(X, parameters) < 0.5
+
+    print(accuracy_score(Y.reshape(Y.shape[1],1),Y_pred.reshape(Y_pred.shape[1],1)))
+
+    assert(Y.shape == (1, X.shape[1])),'check shape of Y'
+    assert(Y_pred.shape == (1, X.shape[1])),'check shape of Y_pred'
+{% endhighlight %}
+
+{% highlight python %}
+# create model
+def logistic_model(X,Y,num_iterations=5000,learning_rate=0.001,lambd=5.0):
+    '''
+        parameters:
+            X: samples
+            Y: outputs
+    '''
+
+    ## initialize parameters
+    parameters = initialize_parameters(X.shape[0])
+    J = [] ## list to capture loss over all epochs
+
+    for i in range(1,num_iterations):
+
+        ## computer linear forward activations
+
+        A = linear_forward_with_activation(X, parameters)
+
+        ## compute loss
+
+        J.append(compute_cost(Y,A,lambd,parameters['W']))
+
+        ## compute gradients
+
+        grads = compute_gradients(A,Y,X)
+
+        ## update parameters
+
+        parameters = update_parameters(parameters,grads,learning_rate,lambd)
+
+
+        if i % 10000 == 0:
+            print("Total loss over all samples in epoch ", i, " is : ", J[i-1], "\n")
+
+    plt.plot(J)
+    plt.ylabel('cost')
+    plt.xlabel('iterations')
+    plt.title("Learning rate = " + str(learning_rate))
+    plt.show()
+
+    return parameters
 {% endhighlight %}
