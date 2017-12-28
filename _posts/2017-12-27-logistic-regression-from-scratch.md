@@ -74,3 +74,26 @@ X_test = X_test.reshape(X_test.shape[1],X_test.shape[0])
 y_train = y_train_orig.reshape(1,y_train_orig.shape[0])
 y_test = y_test_orig.reshape(1,y_test_orig.shape[0])
 {% endhighlight %}
+
+It is now time to initialize our weights / parameters. Since this is going to be a classifier with single unit, it is okay to initialize the weights with zero initial values.
+
+<i>Note: We wouldn't want to do so in case of a neural network with many activation units as all the units will end up calculating same values with no variation in weights across multiple units.</i>
+
+{% highlight python %}
+def initialize_parameters(nx):
+    '''
+        parameters:
+            nx: number of features
+            m: number of samples
+
+        return:
+            parameters : dictionary of parameters W and b
+    '''
+
+    W = np.zeros((nx,1))
+    b = 0
+
+    assert(W.shape == (nx,1)),'wrong dimensions for weight matrix'
+
+    return {'W': W, 'b': b}
+{% endhighlight %}
