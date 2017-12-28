@@ -9,4 +9,4 @@ Here, we will start with a simple Logitic Regression Unit that serves as the bui
 
 Assuming you know the theory behind Logitic Unit, here's how it can be pictured :
 
-<center><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg"><cite>Source: Safari Books Online</cite></center>
+<center><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg"><cite>Source: [Safari Books Online](https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg)</cite></center>
