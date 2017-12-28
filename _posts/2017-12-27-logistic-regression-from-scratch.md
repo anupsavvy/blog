@@ -189,6 +189,8 @@ def compute_gradients(A,Y,X):
     return {'dW' : dW, 'db': db}  
 {% endhighlight %}
 
+Finally, we update our parameters $$W = W - \alphadW$$
+
 {% highlight python %}
 ## update parameters
 
