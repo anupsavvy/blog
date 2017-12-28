@@ -58,3 +58,19 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 from sklearn import linear_model
 {% endhighlight %}
+
+For the sake of convinience, I am going to be using [breast cancer dataset](http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html#sklearn.datasets.load_breast_cancer) from scikit. It has around 550 samples and 30 features for each sample with 2 classes to predict - malignant and benign. We would want to download get this data, normalize and split it into training and test set.
+
+{% highlight python %}
+## scale data
+scaler = StandardScaler()
+scaler.fit(X)
+X_train = scaler.transform(X_train_orig)
+X_test = scaler.transform(X_test_orig)
+
+## reshape the data
+X_train = X_train.reshape(X_train.shape[1],X_train.shape[0])
+X_test = X_test.reshape(X_test.shape[1],X_test.shape[0])
+y_train = y_train_orig.reshape(1,y_train_orig.shape[0])
+y_test = y_test_orig.reshape(1,y_test_orig.shape[0])
+{% endhighlight %}
