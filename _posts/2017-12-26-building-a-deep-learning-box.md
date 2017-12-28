@@ -69,3 +69,16 @@ With the above things in mind, I went for a compact box that supports mini-itx m
 * [Setting up a Deep learning machine in a lazy yet quick way](https://medium.com/impactai/setting-up-a-deep-learning-machine-in-a-lazy-yet-quick-way-be2642318850)
 
 All of the above blogs give an in-depth description on how to setup a box. I must mention that the last two blogs are of [fastai](http://www.fast.ai/) students. I took the first version of fastai course this fall. I will discuss more on it in my subsequent blogs.
+
+<table>
+  <tbody>
+    <tr>
+      <td><img src="{{ site.baseurl }}/public/img/bolt1.img"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt2.img"></td>
+    </tr>
+    <tr>
+      <td><img src="{{ site.baseurl }}/public/img/bolt3.img"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt4.img"></td>
+    </tr>
+  </tbody>
+</table>
