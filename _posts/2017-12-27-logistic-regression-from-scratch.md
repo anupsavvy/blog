@@ -135,3 +135,25 @@ def linear_forward_with_activation(X, parameters):
     assert(A.shape == (1,X.shape[1])),'check dimensions of activations'
     return A   
 {% endhighlight %}
+
+Based on the predicted values, we now calculate total loss over samples.
+
+$$J = (-1/m)\sum_{i=0}^m(Y\log(A) + (1-Y)\log(1-A))$$
+
+{% highlight python %}
+# compute cost
+def compute_cost(Y,A,lambd,W):
+    '''
+        parameters:
+            Y: actual outputs
+            A: linear forward activation outputs for all samples
+
+        returns:
+            J: total loss over all samples
+    '''
+
+    J = (-1/m) * np.sum(np.dot(Y,np.log(A.reshape(m,1))) + np.dot((1-Y),np.log(1-A.reshape(m,1))))
+    J = J + (lambd/(2*m))*np.sum(np.dot(W.reshape(W.shape[1],W.shape[0]),W))
+
+    return J  
+{% endhighlight %}
