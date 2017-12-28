@@ -21,3 +21,4 @@ author:
 version:             1.0.0
 
 theme: jekyll-theme-midnight
+markdown: redcarpet

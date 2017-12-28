@@ -92,8 +92,8 @@ def initialize_parameters(nx):
 
     W = np.zeros((nx,1))
     b = 0
-
     assert(W.shape == (nx,1)),'wrong dimensions for weight matrix'
-
     return {'W': W, 'b': b}
 {% endhighlight %}
+
+$$a^2 + b^2 = c^2$$
