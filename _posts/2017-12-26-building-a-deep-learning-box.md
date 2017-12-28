@@ -21,7 +21,7 @@ With the above things in mind, I went for a compact box that supports mini-itx m
   <tfoot>
   <tr>
   <td><strong>Total</strong></td>
-  <td>944</td>
+  <td>942</td>
   </tr>
   </tfoot>
   <tbody>
