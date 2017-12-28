@@ -12,8 +12,8 @@ Assuming you know the theory behind Logitic Unit, here's how it can be pictured:
 <table>
   <tbody>
     <tr>
-      <td><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg">Fig 1<a href="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg">Source</a></td>
-      <td><img src="{{ site.baseurl }}/public/img/sigmoid.png"></td>
+      <td><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg"><center>Fig 1<a href="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg" target="_blank"> source</a></center></td>
+      <td><img src="{{ site.baseurl }}/public/img/sigmoid.png"><center>Fig 2<a href="https://en.wikipedia.org/wiki/Sigmoid_function" target="_blank"> source</a></center></td>
     </tr>
   </tbody>
 </table>
