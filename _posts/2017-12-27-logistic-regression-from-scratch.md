@@ -9,27 +9,10 @@ Here, we will start with a simple Logitic Regression Unit that serves as the bui
 
 Assuming you know the theory behind Logitic Unit, here's how it can be pictured:
 
-<!-- <table>
-  <tbody>
-    <tr>
-      <td>
-        <center><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg" style="width:50%;height:50%;"></center>
-
-        Fig 1 : Source: [Safari Books Online](https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg)
-      </td>
-      <td>
-        <center><img src="{{ site.baseurl }}/public/img/sigmoid.png" style="width:50%;height:50%;"></center>
-
-        Fig 2 : Source: [Wikipedia](https://en.wikipedia.org/wiki/Sigmoid_function#/media/File:Logistic-curve.svg)
-      </td>
-    </tr>
-  <tbody>
-</table> -->
-
 <table>
   <tbody>
     <tr>
-      <td><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg"></td>
+      <td><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg">Fig 1<a href="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg">Source</a></td>
       <td><img src="{{ site.baseurl }}/public/img/sigmoid.png"></td>
     </tr>
   </tbody>
