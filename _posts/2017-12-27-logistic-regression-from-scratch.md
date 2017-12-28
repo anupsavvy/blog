@@ -29,8 +29,8 @@ Assuming you know the theory behind Logitic Unit, here's how it can be pictured:
 <table>
   <tbody>
     <tr>
-      <td><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg" style="width:50%;height:50%;"></td>
-      <td><img src="{{ site.baseurl }}/public/img/sigmoid.png" style="width:50%;height:50%;"></td>
+      <td><img src="https://www.safaribooksonline.com/library/view/python-deeper-insights/9781787128576/graphics/B05198_06_01.jpg"></td>
+      <td><img src="{{ site.baseurl }}/public/img/sigmoid.png"></td>
     </tr>
   </tbody>
 </table>
