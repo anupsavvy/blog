@@ -116,3 +116,22 @@ def linear_forward(X, parameters):
     assert(Z.shape == (1,X.shape[1])),'check dimensions of linear forward matrix'
     return Z
 {% endhighlight %}
+
+As per Fig 1, we calculate activation based on the Sigmoid function $$1/(1 + e^(-Z))$$
+
+{% highlight python %}
+# compute activation
+def linear_forward_with_activation(X, parameters):
+    '''
+        parameters:
+            Z: linear forward output
+
+        returns:
+            A: sigmoid activation of linear forward output (1/(1+ exp(-z)))
+    '''
+    Z = linear_forward(X, parameters)
+    A = 1 / ( 1 + np.exp(-Z))
+
+    assert(A.shape == (1,X.shape[1])),'check dimensions of activations'
+    return A   
+{% endhighlight %}
