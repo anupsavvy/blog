@@ -96,4 +96,23 @@ def initialize_parameters(nx):
     return {'W': W, 'b': b}
 {% endhighlight %}
 
-$$a^2 + b^2 = c^2$$
+Next, we calculate linear forward output $$Z = W^TX + b$$ over all samples X.
+
+{% highlight python %}
+# compute linear forward
+def linear_forward(X, parameters):
+    '''
+        parameters:
+            X: input vectors
+            parameters: Weights and bias
+
+        returns:
+            Z: linear output where Z = WX + b
+
+    '''
+    (W,b) = parameters['W'],parameters['b']
+
+    Z = np.dot(W.reshape((W.shape[1],W.shape[0])),X) + b
+    assert(Z.shape == (1,X.shape[1])),'check dimensions of linear forward matrix'
+    return Z
+{% endhighlight %}
