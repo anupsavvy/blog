@@ -9,7 +9,7 @@ Here, we will start with a simple Logitic Regression Unit that serves as the bui
 
 Assuming you know the theory behind Logitic Unit, here's how it can be pictured:
 
-<table>
+<!-- <table>
   <tbody>
     <tr>
       <td>
@@ -24,8 +24,20 @@ Assuming you know the theory behind Logitic Unit, here's how it can be pictured:
       </td>
     </tr>
   <tbody>
-</table>
+</table> -->
 
+<table>
+  <tbody>
+    <tr>
+      <td><img src="{{ site.baseurl }}/public/img/bolt1.jpg"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt2.jpg"></td>
+    </tr>
+    <tr>
+      <td><img src="{{ site.baseurl }}/public/img/bolt3.jpg"></td>
+      <td><img src="{{ site.baseurl }}/public/img/bolt4.jpg"></td>
+    </tr>
+  </tbody>
+</table>
 
 
 As opposed to just the notion of activation function pertaining to a unit, it helps me divide a unit into 3 different parts:
