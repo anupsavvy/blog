@@ -36,10 +36,25 @@ Assuming you know the theory behind Logitic Unit, here's how it can be pictured:
 </table>
 
 
-As opposed to just the notion of activation function pertaining to a unit, it helps me divide a unit into 3 different parts:
+As opposed to just the notion of activation function pertaining to a unit, it helps me to divide a unit into 3 different parts:
 
-* Weights (W)
+* Weights / Parameters that help us map a given input to expected output (W)
 * Linear output (Z)
 * Activation output (A)
 
-Fig 1 depicts a sigmoid unit. Sigmoid function is usually better at determining binary outputs. It's graph (Fig 2) is centered around 0.5, so, we can classify a given output signal as 1/yes for activations above or equal to 0.5 and vice versa.
+Fig 1 depicts a sigmoid unit. Sigmoid function is usually better at determining binary outputs. It's graph (Fig 2) is centered around 0.5, so, we can classify an output signal as 1/yes for activations above or equal to 0.5 and vice versa.
+
+Logistic Units are suitable for fitting a line with a given set of points. A unit is basically trying to get the input elements (x1, x2, x3 ...), multiply them with their respective weights / parameters (w1, w2, w2 ...), add some bias factor (b) to it and derive an output (z). This is further pushed into an activation function that helps map the real valued z to either 0 or 1 (y_pred).
+
+Given this bit of theory, let's get down to some coding with necessary imports.
+
+{% highlight python %}
+%matplotlib inline
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score
+from sklearn import linear_model
+{% endhighlight %}
