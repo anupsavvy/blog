@@ -26,7 +26,7 @@ where,
 
 Next, we randomly create our input/output samples and parameters in numpy with their respective dimensions
 
-{% highlight %}
+{% highlight python %}
 x = np.random.randn(m,n)
 y = np.random.randn(m,l2)
 
