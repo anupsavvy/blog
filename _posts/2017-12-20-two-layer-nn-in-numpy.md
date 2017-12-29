@@ -96,7 +96,7 @@ plt.show()
 That's it ! Few things to remember while coding a neural network:
 
 * Derivative of a ReLU function is 0 below 0 and 1 above 0.
-* Low accuracy on a training set probably means we have under-fitting or a variance issue. This could possibly be resolved with more training data, by changing the number of units / layers of the network or by training the network for more number iterations.
+* Low accuracy on a training set probably means we have under-fitting or a variance issue. This could possibly be resolved with more training data, by changing the number of units / layers of the network or by training the network for more number of iterations.
 * Low accuracy on a test set would mean we have over-fitting or a high bias issue. This can be handled by multiple techniques like regularization, dropouts and making sure that the training and test set have similar data distribution.
 * It would be best to start with a smaller network and add depth only if necessary.
 * All weights should never be initialized to zero, otherwise, the network will very likely behave no better than a logistic unit.
