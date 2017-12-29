@@ -103,7 +103,3 @@ That's it ! Few things to remember while coding a neural network:
 * All weights should never be initialized to zero, otherwise, the network will very likely behave no better than a logistic unit.
 * When possible, normalize the linear outputs of each layer.
 * It's best to keep ReLU as the activation function for hidden layers and sigmoid / softmax for the outer layer.  
-
-{% if page.comments == true %}
-  {% include disqus.html %}
-{% endif %}
