@@ -10,9 +10,9 @@ This is how our neural network will look:
 <img src="http://www.extremetech.com/wp-content/uploads/2015/07/NeuralNetwork.png">
 <center>Fig 1 <a href="https://www.extremetech.com/extreme/215170-artificial-neural-networks-are-changing-the-world-what-are-they" target="_blank">source</a></center>
 
-It almost look like the hidden layer is nothing but a bunch of Logistic Units stacked on top of each other. The difference here is that we are adding another layer of units which are equal in number to the dimensions of our output variable.
+It almost looks like the hidden layer is nothing but a bunch of Logistic Units stacked on top of each other. The difference here is that we are adding another layer of units which are equal in number to the dimensions of our output variable.
 
-Let's go with the following dimensions for our 2-layered neural network
+Let's go with the following size for our 2-layered neural network
 
 {% highlight python %}
 m, n, l1, l2 = 64, 1000, 100, 10
@@ -96,7 +96,7 @@ plt.show()
 That's it ! Few things to remember while coding a neural network:
 
 * Derivative of a ReLU function is 0 below 0 and 1 above 0.
-* Low accuracy on a training set probably means we have under-fitting or a variance issue. This could possibly be resolved with more training data or by changing the number of units / layers of the network.
+* Low accuracy on a training set probably means we have under-fitting or a variance issue. This could possibly be resolved with more training data, by changing the number of units / layers of the network or by training the network for more number iterations.
 * Low accuracy on a test set would mean we have over-fitting or a high bias issue. This can be handled by multiple techniques like regularization, dropouts and making sure that the training and test set have similar data distribution.
 * It would be best to start with a smaller network and add depth only if necessary.
 * All weights should never be initialized to zero, otherwise, the network will very likely behave no better than a logistic unit.
