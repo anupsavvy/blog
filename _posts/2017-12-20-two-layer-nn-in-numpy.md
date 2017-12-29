@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Two Layer Neural Network in Numpy
 ---
 
