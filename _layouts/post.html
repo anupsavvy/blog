@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 <div class="post">
@@ -9,6 +10,9 @@ layout: default
     <a href="{{ site.url }}{{ page.url }}#disqus_thread" class="disqus-comment-count">Comments</a>
   {% endif %} -->
   {{ content }}
+  {% if page.comments == true %}
+    {% include disqus.html %}
+  {% endif %}
 </div>
 
 <div class="related">
