@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Logistic Regression from Scratch
+comments: true
 ---
 
 In pursuit of gaining strength at Deep Learning I have chosen a path to start with basics. I am not new to the concepts in Machine Learning. However, I like to take one step at a time and not rush through things. This will also help me refresh a lot of concepts that I don't necessarily get to use at work on daily basis.

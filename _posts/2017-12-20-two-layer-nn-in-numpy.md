@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Two Layer Neural Network in Numpy
+comments: true
 ---
 
 In the previous post we saw how we can build a simple [Logistic Unit](http://anupsawant.com/2017/12/04/logistic-regression-from-scratch/). In this post we will write a quick 2-layered neural network in numpy. Anything bigger than a 2 layered network looks like a hairball to me and gets me confused easily when it comes to computing gradients.

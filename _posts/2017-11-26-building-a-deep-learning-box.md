@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Building a Deep Learning Box
+comments: true
 ---
 
 While there are many useful and well-written blogs out there, I quickly wanted to document my own setup and some reasons that led to it.
