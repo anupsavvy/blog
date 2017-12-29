@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Building a Deep Learning Box
 ---
 
