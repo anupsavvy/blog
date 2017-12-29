@@ -9,7 +9,7 @@ tagline:             'Learning Deep Networks'
 description:         'This site documents my journey towards getting better at Deep Learning and related topics.'
 url:                 https://anupsavvy.github.io/
 baseurl:             '/'
-paginate:            5
+paginate:            2
 
 # About/contact
 author:
