@@ -83,3 +83,7 @@ All of the above blogs give an in-depth description on how to setup a box. I mus
     </tr>
   </tbody>
 </table>
+
+{% if page.comments == true %}
+  {% include disqus.html %}
+{% endif %}

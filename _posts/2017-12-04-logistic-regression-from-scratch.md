@@ -266,3 +266,7 @@ def logistic_model(X,Y,num_iterations=5000,learning_rate=0.001,lambd=5.0):
 <img src="{{ site.baseurl }}/public/img/learning_curve.png">
 
 We get a smooth learning curve over the training set. With further iterations and feature analysis, we can determine if we are facing a high variance or high bias issue and bring down the loss. However, so far our toy Logistic Unit seems to be behaving the way we want it to be.
+
+{% if page.comments == true %}
+  {% include disqus.html %}
+{% endif %}
