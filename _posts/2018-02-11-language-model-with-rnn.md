@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Generating text like Dan Brown (Language Model with RNN)
+title: Generating text like Dan Brown (RNN Language Model)
 ---
 
 RNNs (Recurrent Neural Networks) have been making some buzz for last 3-4 years. They have created some new benchmarks in learning sequential data that spans across multiple time steps like text and music. I can't really think of a better resource on understanding RNN than [Andrej Karpathy's blogpost](http://karpathy.github.io/2015/05/21/rnn-effectiveness/).
