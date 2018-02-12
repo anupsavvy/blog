@@ -11,7 +11,7 @@ What I am going to be trying in this post is to have a language model trained on
 <center><img src="http://karpathy.github.io/assets/rnn/charseq.jpeg"></center>
 <center>Fig 1 <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/" target="_blank">source</a></center>
 
-### Getting the dataset
+## Getting the dataset
 
 <center><img src="https://static.rogerebert.com/uploads/movie/movie_poster/angels-and-demons-2009/large_grN4lETrHNejatQZFP2F2DAWMU4.jpg"></center>
 <center><a href="https://www.rogerebert.com/reviews/angels-and-demons-2009" target="_blank">source</a></center>
@@ -33,7 +33,7 @@ from torch.utils.data import Dataset, DataLoader
 
 With Pytorch making our life easier with implementations of RNN, I find the most important and crucial part of code to be the preprocessing of our input. It took some time for me to wrap my head around how the network has to be fed with the text input in batches. It is probably much easier and straightforward to feed image data into dataloaders. We will go step-by-step over how I do this. There could be better ways of implementing this and I welcome your suggestions in the comments section. We create a LMDataset class that helps create corpus dictionaries and respective helper methods. I think it would be important to respect each of those methods with their own chunk of explanation. Following methods are a part of LMDataset class.
 
-#### Create Corpus
+### Create Corpus
 
 {% highlight  python %}
 def corpus(self):
@@ -52,7 +52,7 @@ def corpus(self):
 
 <em>corpus</em> method helps us map the words to dictionaries. Given a text we map each word to a numerical id and vice versa. The <em>encodedtext</em> list just adds numerical ids as per the respective word sequence in the text. Notice, we use end of the line - <em><eos></em> as a marker for our arbitrary length of a sentence. <em><eos></em> tag will help us create new lines when we sample our output from network model.
 
-#### Encode and reshape text
+### Encode and reshape text
 
 {% highlight  python %}
 def encodetext(self):
@@ -64,7 +64,7 @@ def encodetext(self):
 
 What we are trying to do here is to divide the id encoded text (encodetext python list) into a number of (batch_size) sequences of equal length (sequence). So, imagine the end result to be a matrix (encodedtext) with dimensions batch_size * sequence.
 
-#### Number of sequences
+### Number of sequences
 
 {% highlight  python %}
 def __len__(self):
@@ -73,7 +73,7 @@ def __len__(self):
 
 One of the attributes of LMDataset class is sequence_len that determines the length of input sequence. Dividing the columns of encodetext with sequence_len will give us number of possible sequences to be fed to the network.
 
-#### Input and Target
+### Input and Target
 
 {% highlight  python %}
 def __getitem__(self,index):
@@ -140,7 +140,7 @@ class LMDataset(Dataset):
         return len(self.words2idx)
 {% endhighlight %}
 
-### Network Architecture
+## Network Architecture
 
 The network that we use here has an embedding, LSTM and, a Linear block. We pass in a few hyperparameters to our network class, namely,
 
@@ -221,19 +221,19 @@ class LMRNN(nn.Module):
                 sentence.append(word)
 {% endhighlight %}
 
-#### Embedding block
+### Embedding block
 
 The embedding module of Pytorch asks for a vocabulary size and dimensions of an embedding vector for each of the word id in the corpus. There are multiple ways one can derive embedding vectors for a word. Some of the popular techniques are Word2Vec and GloVe. Here, we are using a simple lookup techinque offered by Pytorch. The idea is very similar to one mentioned [here](https://stackoverflow.com/a/34877590) where a unique vector is generated for each word id.
 
-#### LSTM blocks
+### LSTM blocks
 
 Fig. 1 shows a simple character RNN where the network is trying to predict the next character in a given word. The key principle to understand here is that the output of hidden layer is fed back to hidden layer along with new input. The idea is to remember past inputs and predict future outputs based on relation between inputs at different time steps. One of the problems with the simplest version and character level RNNs is that they are not good at predicting future outputs based on a long sequence of inputs. [LSTMs](https://en.wikipedia.org/wiki/Long_short-term_memory) (Long short-term memory) networks counter this problem with a bunch of gates in the RNN unit. These gates basically control on what past input needs be remembered or forgotten for upcoming predictions. Following is probably one of the best resources to understand [how LSTM works](http://colah.github.io/posts/2015-08-Understanding-LSTMs/). For our purpose, we use a 3-layered LSTM block that accepts an embedding vector and throws out a vector of hidden_size. The output of previous input is fed back into the LSTM block over the entire sequence of input.
 
-#### Detach methods
+### Detach method
 
 The detach method of LMRNN class helps us detach the hidden layer weights from computation graph for gradient update after training a sequence. This is because we don't want to propogate gradients to hidden states from previous sequence.
 
-### Loss, optimizer and training
+## Loss, optimizer and training
 
 We define a method <em>langmodel</em> that helps us create a dataloader based on LMDataset, a model with LMRNN, a CrossEntropyLoss criterion and an Adam optimizer. All of them are subsequently returned as a dictionary for a training method to use.
 
@@ -295,7 +295,7 @@ def fitLM(path,embed_size=128,hidden_size=1024,num_layers=2,batch_size=20,learni
         "dataset":rnn['dataloader'].dataset }
 {% endhighlight %}
 
-### Sample Predictions
+## Sample Predictions
 {% highlight python %}
 lm = fitLM(path,embed_size=256,hidden_size=1024,num_layers=3,epochs=65,learning_rate=0.001)
 {% endhighlight %}
