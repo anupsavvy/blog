@@ -83,7 +83,7 @@ def __getitem__(self,index):
         return data,target
 {% endhighlight %}
 
-Since LMDataset class inherits nn.utils.data.Dataset class, we have to implement __getitem__ to help deliver the input and target to our network. The idea here is to send a chunk of matrix (encodedtext) of size batch_size * sequence_len as input and the target would be of the same size but shifted one index towards right. For example, this would mean if there is a sentence "I live in Chicago and I love pets.", then the input would go in as "I live in Chicago and I love" while the target would go in as "live in Chicago and I love pets."
+Since LMDataset class inherits nn.utils.data.Dataset class, we have to implement getitem to help deliver the input and target to our network. The idea here is to send a chunk of matrix (encodedtext) of size batch_size * sequence_len as input and the target would be of the same size but shifted one index towards right. For example, this would mean if there is a sentence "I live in Chicago and I love pets.", then the input would go in as "I live in Chicago and I love" while the target would go in as "live in Chicago and I love pets."
 
 With the important methods in place, following is the full implementation of LMDataset class with few other supporting methods.
 
@@ -144,11 +144,11 @@ class LMDataset(Dataset):
 
 The network that we use here has an embedding, LSTM and, a Linear block. We pass in a few hyperparameters to our network class, namely,
 
-** vocab_size : size of vocabulary or len of wtoi dictionary.
-** embed_size : size of embedding vector for each word id.
-** hidden_size : size of hidden output vector.
-** num_layers : number of layers of RNN blocks in the network.
-** batch_size : number of sequences to be thrown as input in one batch.
+* vocab_size : size of vocabulary or len of wtoi dictionary.
+* embed_size : size of embedding vector for each word id.
+* hidden_size : size of hidden output vector.
+* num_layers : number of layers of RNN blocks in the network.
+* batch_size : number of sequences to be thrown as input in one batch.
 
 {% highlight python %}
 class LMRNN(nn.Module):
