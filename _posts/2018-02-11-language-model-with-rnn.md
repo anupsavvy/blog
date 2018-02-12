@@ -301,10 +301,8 @@ lm = fitLM(path,embed_size=256,hidden_size=1024,num_layers=3,epochs=65,learning_
 {% endhighlight %}
 
 <center><img src="{{ site.baseurl }}/public/img/epoch1.png"></center>
-<center>
 
 <center><img src="{{ site.baseurl }}/public/img/epoch.png"></center>
-<center>
 
 {% highlight python %}
 plt.ylabel('loss')
@@ -314,11 +312,9 @@ plt.show()
 {% endhighlight %}
 
 <center><img src="{{ site.baseurl }}/public/img/lstmcurve.png"></center>
-<center>
 
 {% highlight python %}
 lm['model'].sample(lm['dataset'],samples=100)
 {% endhighlight %}
 
 <center><img src="{{ site.baseurl }}/public/img/sample.png"></center>
-<center>
