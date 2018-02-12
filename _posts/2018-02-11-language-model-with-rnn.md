@@ -144,11 +144,11 @@ class LMDataset(Dataset):
 
 The network that we use here has an embedding, LSTM and, a Linear block. We pass in a few hyperparameters to our network class, namely,
 
-* vocab_size : size of vocabulary or len of wtoi dictionary.
-* embed_size : size of embedding vector for each word id.
-* hidden_size : size of hidden output vector.
-* num_layers : number of layers of RNN blocks in the network.
-* batch_size : number of sequences to be thrown as input in one batch.
+- vocab_size : size of vocabulary or len of wtoi dictionary.
+- embed_size : size of embedding vector for each word id.
+- hidden_size : size of hidden output vector.
+- num_layers : number of layers of RNN blocks in the network.
+- batch_size : number of sequences to be thrown as input in one batch.
 
 {% highlight python %}
 class LMRNN(nn.Module):
