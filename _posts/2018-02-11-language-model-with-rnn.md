@@ -37,17 +37,17 @@ With Pytorch making our life easier with implementations of RNN, I find the most
 
 {% highlight  python %}
 def corpus(self):
-        idx = 0
-        with open(self.path,'r') as f:
-            for line in f:
-                words = line.split()
-                words.append('<eos>')
-                for word in words:
-                    if word not in self.words2idx:
-                        self.words2idx[word] = idx
-                        self.idx2words[idx] = word
-                        idx += 1
-                    self.encodedtext.append(self.words2idx[word])
+    idx = 0
+    with open(self.path,'r') as f:
+        for line in f:
+            words = line.split()
+            words.append('<eos>')
+            for word in words:
+                if word not in self.words2idx:
+                    self.words2idx[word] = idx
+                    self.idx2words[idx] = word
+                    idx += 1
+                self.encodedtext.append(self.words2idx[word])
 {% endhighlight %}
 
 <em>corpus</em> method helps us map the words to dictionaries. Given a text we map each word to a numerical id and vice versa. The <em>encodedtext</em> list just adds numerical ids as per the respective word sequence in the text. Notice, we use end of the line - <em><eos></em> as a marker for our arbitrary length of a sentence. <em><eos></em> tag will help us create new lines when we sample our output from network model.
@@ -56,10 +56,10 @@ def corpus(self):
 
 {% highlight  python %}
 def encodetext(self):
-        sequence = len(self.encodedtext) // self.batch_size
-        cropped_len = sequence * self.batch_size
-        self.encodedtext = torch.LongTensor(self.encodedtext[:cropped_len]).view(self.batch_size,-1)
-        return self.encodedtext
+    sequence = len(self.encodedtext) // self.batch_size
+    cropped_len = sequence * self.batch_size
+    self.encodedtext = torch.LongTensor(self.encodedtext[:cropped_len]).view(self.batch_size,-1)
+    return self.encodedtext
 {% endhighlight %}
 
 What we are trying to do here is to divide the id encoded text (encodetext python list) into a number of (batch_size) sequences of equal length (sequence). So, imagine the end result to be a matrix (encodedtext) with dimensions batch_size * sequence.
@@ -68,7 +68,7 @@ What we are trying to do here is to divide the id encoded text (encodetext pytho
 
 {% highlight  python %}
 def __len__(self):
-        return (self.encodedtext.size(1) // self.sequence_len) - 1
+    return (self.encodedtext.size(1) // self.sequence_len) - 1
 {% endhighlight %}
 
 One of the attributes of LMDataset class is sequence_len that determines the length of input sequence. Dividing the columns of encodetext with sequence_len will give us number of possible sequences to be fed to the network.
@@ -77,10 +77,10 @@ One of the attributes of LMDataset class is sequence_len that determines the len
 
 {% highlight  python %}
 def __getitem__(self,index):
-        i = index*self.sequence_len
-        data = self.encodedtext[:,i:i+self.sequence_len]
-        target = self.encodedtext[:,i+1:i+1+self.sequence_len]
-        return data,target
+    i = index*self.sequence_len
+    data = self.encodedtext[:,i:i+self.sequence_len]
+    target = self.encodedtext[:,i+1:i+1+self.sequence_len]
+    return data,target
 {% endhighlight %}
 
 Since LMDataset class inherits nn.utils.data.Dataset class, we have to implement getitem to help deliver the input and target to our network. The idea here is to send a chunk of matrix (encodedtext) of size batch_size * sequence_len as input and the target would be of the same size but shifted one index towards right. For example, this would mean if there is a sentence "I live in Chicago and I love pets.", then the input would go in as "I live in Chicago and I love" while the target would go in as "live in Chicago and I love pets."
