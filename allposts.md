@@ -12,4 +12,4 @@ title: All Posts
 * [Building a Deep Learning Box](http://anupsawant.com/2017/11/26/building-a-deep-learning-box/)
 
 ### Book Reviews
-* [Python Tricks](http://anupsawant.com/2018/02/16/book-review-python-tricks/)
+* [Python Tricks](http://anupsawant.com/book-review/2018/02/16/book-review-python-tricks/)
