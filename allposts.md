@@ -10,3 +10,6 @@ title: All Posts
 * [Two Layer Neural Network in Numpy](http://anupsawant.com/2017/12/20/two-layer-nn-in-numpy/)
 * [Logistic Regression from Scratch](http://anupsawant.com/2017/12/04/logistic-regression-from-scratch/)
 * [Building a Deep Learning Box](http://anupsawant.com/2017/11/26/building-a-deep-learning-box/)
+
+### Book Reviews
+* [Python Tricks](http://anupsawant.com/2018/02/16/book-review-python-tricks/)
