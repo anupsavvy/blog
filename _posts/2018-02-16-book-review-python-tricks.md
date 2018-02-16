@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Book Review - Python Tricks
-category: Book Review
+category: book-review
 ---
 
 <center><img src="{{ site.baseurl }}/public/img/python-tricks.png"></center>
